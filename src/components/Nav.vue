@@ -37,16 +37,27 @@ export default {
 			this.activeLink = linkId
 			this.$emit("navigate", linkId) // Emitting an event with the linkId
 		},
+
 		handleScroll() {
 			const bottomNav = document.querySelector(".bottom-nav")
-			if (window.pageYOffset > 50) {
-				if (bottomNav.classList.contains("hidden-on-mobile")) {
-					bottomNav.classList.remove("hidden-on-mobile")
-				}
+			const threshold = 50 // Threshold from top of the page to show the navbar
+			const bottomThreshold = 300 // Threshold from bottom of the page to hide the navbar
+
+			// Calculate the distance from the bottom of the document
+			const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+			const windowHeight = window.innerHeight
+			const documentHeight = document.documentElement.offsetHeight
+
+			// Determine if we're close to the bottom of the page
+			const closeToBottom = scrollTop + windowHeight + bottomThreshold >= documentHeight
+
+			// Logic to show/hide navbar based on scroll position and proximity to page bottom
+			if (scrollTop > threshold && !closeToBottom) {
+				// If scrolled down more than threshold and not close to bottom, show navbar
+				bottomNav.classList.remove("hidden-on-mobile")
 			} else {
-				if (!bottomNav.classList.contains("hidden-on-mobile")) {
-					bottomNav.classList.add("hidden-on-mobile")
-				}
+				// If at the top of the page or close to bottom, hide navbar
+				bottomNav.classList.add("hidden-on-mobile")
 			}
 		},
 	},
@@ -70,30 +81,29 @@ div {
 	border-radius: 69px;
 }
 
-
 @media (max-width: 1000px) {
 	.bottom-nav.hidden-on-mobile {
 		display: none !important; /* Ensure the nav is hidden */
 	}
 
 	.bottom-nav {
-        position: fixed;
-        bottom: 0; /* Align to the bottom */
-        left: 10px; /* Add 16px margin to the left */
-        right: 10px; /* Add 16px margin to the right */
-        box-sizing: border-box; /* Ensures padding doesn't add to the width */
-        width: auto; /* Auto width to respect left/right margins */
-        display: flex;
-        justify-content: space-between;
-        align-items: center; /* Vertically center items within the nav */
-        border-radius: 30px;
-        padding: 10px;
-        background: rgba(0, 0, 0, 0.13);
-        backdrop-filter: blur(17.5px);
-        margin-bottom: 0.5cm; /* Adjust distance from the bottom if necessary */
-    }
+		position: fixed;
+		bottom: 0; /* Align to the bottom */
+		left: 10px; /* Add 16px margin to the left */
+		right: 10px; /* Add 16px margin to the right */
+		box-sizing: border-box; /* Ensures padding doesn't add to the width */
+		width: auto; /* Auto width to respect left/right margins */
+		display: flex;
+		justify-content: space-between;
+		align-items: center; /* Vertically center items within the nav */
+		border-radius: 30px;
+		padding: 10px;
+		background: rgba(0, 0, 0, 0.13);
+		backdrop-filter: blur(17.5px);
+		margin-bottom: 0.5cm; /* Adjust distance from the bottom if necessary */
+	}
 
-    /* Adjust nav-item styles if necessary */
+	/* Adjust nav-item styles if necessary */
 	.nav-item {
 		cursor: pointer;
 		padding: 10px 6px; /* Adjust padding as needed */
@@ -107,7 +117,6 @@ div {
 
 	/* Additional styles for hover, active, etc. */
 	/* ... */
-
 
 	.nav-item:hover {
 		border: solid 1px rgb(255, 255, 255);
