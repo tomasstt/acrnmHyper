@@ -13,15 +13,15 @@
 	  data() {
 		return {
 		  images: [
-		   require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),  require('../assets/banner.svg'),require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),  require('../assets/banner.svg'),require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),  require('../assets/banner.svg'),require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),require('../assets/banner.svg'),
-		   require('../assets/banner.svg'),  require('../assets/banner.svg')
+		   require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),  require('../assets/Slids1.svg'),require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),  require('../assets/Slids1.svg'),require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),  require('../assets/Slids1.svg'),require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),require('../assets/Slids1.svg'),
+		   require('../assets/Slids1.svg'),  require('../assets/Slids1.svg')
 		  ],
 		};
 	  },

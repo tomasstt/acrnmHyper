@@ -1,83 +1,83 @@
 
 <template><div class="black">
-  <div class="photobanner">
-    <div class="slider">
-      <img v-for="(image, index) in images" :key="index" :src="image" />
-    </div>
+	<div class="photobanner">
+	  <div class="slider">
+		<img v-for="(image, index) in images" :key="index" :src="image" />
+	  </div>
+	</div>
   </div>
-</div>
-</template>
+  </template>
+	
+	<script>
+	export default {
+	  data() {
+		return {
+		  images: [
+		   require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),  require('../assets/Slids3.svg'),require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),  require('../assets/Slids3.svg'),require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),  require('../assets/Slids3.svg'),require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),require('../assets/Slids3.svg'),
+		   require('../assets/Slids3.svg'),  require('../assets/Slids3.svg')
+		  ],
+		};
+	  },
+	  methods: {
+	   
+		
+		zoomOut(index) {
+		  // Remove the CSS class when the hover ends
+		  this.$set(this.images, index, {
+			...this.images[index],
+			
+			
+		  });
+		},
+	  },
+	};
+	</script>
+	
+	<style scoped>
+	.photobanner {
+	  
+	  width: 100%;
   
-  <script>
-  export default {
-    data() {
-      return {
-        images: [
-         require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),  require('../assets/banner3.svg'),require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),  require('../assets/banner3.svg'),require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),  require('../assets/banner3.svg'),require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),require('../assets/banner3.svg'),
-         require('../assets/banner3.svg'),  require('../assets/banner3.svg')
-        ],
-      };
-    },
-    methods: {
-     
-      
-      zoomOut(index) {
-        // Remove the CSS class when the hover ends
-        this.$set(this.images, index, {
-          ...this.images[index],
-          
-          
-        });
-      },
-    },
-  };
-  </script>
+	  
+	  overflow: hidden;
+	  
+	}
+	
+	.slider {
+	  display: flex;
+	  background:  black;
+	  animation: bannermove 67s linear infinite;
+	  
+	}
+	
+	@keyframes bannermove {
+	  0% {
+		transform: translateX(0);
+	  }
+	  100% {
+		transform: translateX(calc(-8640px + 100%));
+	  }
+	}
   
-  <style scoped>
-  .photobanner {
-    
-    width: 100%;
-
-    
-    overflow: hidden;
-    
-  }
+	.photobanner img {
+	  height: 104px;
   
-  .slider {
-    display: flex;
-    background:  black;
-    animation: bannermove 67s linear infinite;
-    
-  }
-  
-  @keyframes bannermove {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-8640px + 100%));
-    }
-  }
-
-  .photobanner img {
-    height: 104px;
-
-    width: auto;
-    
-    background:  black;
-    
-    display: flex;
-    padding: 20px;
-
-
-  }
-  </style>
+	  width: auto;
+	  
+	  background:  black;
+	  
+	  display: flex;
+	  padding: 20px;
   
   
+	}
+	</style>
+	
+	

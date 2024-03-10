@@ -703,7 +703,7 @@ p {
 	.description {
 		margin-top: auto; /* Push description towards the center */
 		margin-bottom: auto; /* Maintain centering */
-		font-size: 50px;
+		font-size: 43px;
 
 		text-align: start; /* Center the text horizontally */
 	}
