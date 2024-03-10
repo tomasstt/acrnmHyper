@@ -29,7 +29,7 @@
 		</div>
 		<div class="footer">
 			<div class="left">
-				<p>support@acronym.com</p>
+				<p>info@acronym.sk</p>
 			</div>
 			<div class="right">
 				<p class="spc">Privacy Policy</p>
@@ -48,25 +48,25 @@ export default {
 			const recipient = "INFO@ACRONYM.SK"
 			const subject = encodeURIComponent("Website Discussion")
 			const bodyText = `
-Purpose of the Website:
-- What is the primary goal of your website?
-- Describe the nature of your business or project.
-- Who is your target audience?
+Účel webovej stránky:
+- Čo je hlavným cieľom vašej webovej stránky?
+- Opíšte povahu svojho podniku alebo projektu.
+- Kto je vaša cieľová skupina?
 
-Design Preferences:
-- Do you have any color schemes or themes in mind?
-- Are there any websites you admire?
+Preferencie dizajnu:
+- Máte na mysli nejaké farebné schémy alebo témy?
+- Existujú nejaké webové stránky, ktoré obdivujete?
 
-Functionality and Features:
-- What specific functionalities do you need?
+Funkčnosť a vlastnosti:
+- Aké konkrétne funkcie potrebujete?
 
-Budget and Timeline:
-- What is your budget range for this project?
-- What is your desired timeline for completing the website?
+Rozpočet a časový plán:
+- Aký je váš rozpočet na tento projekt?
+- Aký je váš požadovaný časový harmonogram dokončenia webovej stránky?
 
-Ongoing Maintenance and Support:
-- Will you require assistance with ongoing maintenance?
-- Are you interested in ongoing support or marketing services post-launch?
+Priebežná údržba a podpora:
+- Budete potrebovať pomoc s priebežnou údržbou?
+- Máte záujem o priebežnú podporu alebo marketingové služby po spustení?
 `
 
 			const body = encodeURIComponent(bodyText)
