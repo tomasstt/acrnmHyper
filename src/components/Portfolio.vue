@@ -37,7 +37,7 @@
 			<section class="h-screen bg-black relative second-section">
 				<div class="h-full flex flex-col items-center md:flex-row">
 					<!-- Text and button (for all screens) -->
-					<div ref="textElement" data-scroll data-scroll-speed="1" data-scroll-delay="0.1" class="text-left md:absolute static bottom-[100px] pl-[16px] z-10 md:text-left w-full md:mt-0 mt-[60px] text-white md:pl-[80px]">
+					<div ref="textElement" data-scroll data-scroll-speed="1" data-scroll-delay="0.1" class="text-left absolute  bottom-[100px] pl-[16px] z-10 md:text-left w-full md:mt-0 mt-[60px] text-white md:pl-[80px]">
 						<p class="text-xs montreal not-italic font-normal leading-[normal]">WIP 2024</p>
 						<h1 class="w-full canela md:w-[467px] mt-4 md:mt-[12px] md:text-[50px] text-[28px] not-italic font-thin leading-[normal]">
 							Luxvital - Supplements<br class="hide-on-mobile" />

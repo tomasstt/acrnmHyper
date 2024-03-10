@@ -28,7 +28,7 @@
 				</div>
 			</div>
 		</div>
-		<img class="head-img" src="../assets/luxvital.svg" alt="Fullscreen Background" />
+		<img class="head-img" src="../assets/sagroplands.svg" alt="Fullscreen Background" />
 
 		<ContactVue></ContactVue>
 	</div>
