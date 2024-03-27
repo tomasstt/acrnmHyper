@@ -1,6 +1,6 @@
 <template>
 	<div class="full-screen-container scroll-container">
-		<img class="head-img" src="../assets/mockupluxvital.svg" alt="Fullscreen Background" />
+		<img class="head-img" src="../assets/luxxvital.svg" alt="Fullscreen Background" />
 
 	
 		<div class="info-section">
